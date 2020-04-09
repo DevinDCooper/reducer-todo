@@ -1,16 +1,12 @@
-import React, { useState } from 'react';
-
-import TodoForm from "./components/todoForm";
+import React from 'react';
+import Todo from "./components/Todo";
 import './App.css';
 
 function App() {
-
-
-  
   return (
     <div className="App">
-    <h1>Todo app!</h1>
-    <TodoForm/>
+    <h1>Goals</h1>
+    <Todo/>
     </div>
   );
 }
