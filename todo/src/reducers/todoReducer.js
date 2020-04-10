@@ -13,11 +13,12 @@ switch (action.type) {
         };
         case "TOGGLE_TODO":
                 return {
-                    todos: state.todos.map((t, index) =>  index === action.index ? {...t, completed: !t.completed} : t)
+                    todos: state.todos.map((t, index) =>  index === action.index ? {...t, completed: !t.completed } : t
+                    )
                 };
                 case "TOGGLE_DONE":
                         return {
-                            todos: state.todos.filter((t, index) =>  index === action.index ? {...t, completed: !t.completed} : t)
+                            todos: state.todos.filter((t) =>  t.completed !== t.completed  )
                         };
         
 

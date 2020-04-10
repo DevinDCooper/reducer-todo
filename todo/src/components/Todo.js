@@ -25,12 +25,15 @@ onSubmit={e => {
  <div 
   key={t.item} 
  onClick={() => dispatch({type: "TOOGLE_TODO", index})}
- 
+ style={{textDecoration: t.completed ? "line-through" : ""}}
  > {t.text}
-    <button onClick={e =>{
-    dispatch({ type: "TOGGLE_DONE", index})
-}}>clear</button>
+ <button onClick={() => {
+     dispatch({type: "TOGGLE_DONE", index})
+ }}> clear </button>
  </div>)}
+
+
+
  {initialTodoState.item}
 
 
